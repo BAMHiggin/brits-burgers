@@ -1,6 +1,6 @@
-var mysql = require("mysql");
+const mysql = require("mysql");
 
-var connection;
+const connection;
 
 const pass = process.env.DB_PASSWORD;
 
