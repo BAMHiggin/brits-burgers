@@ -1,11 +1,12 @@
-var orm = require("../config/orm.js");
+const orm = require("../config/orm.js");
 
-var burger = {
-    all: function(cb) {
-        orm.all("burgers", function(res) {
-            cb(res);
+let burger = {
+    all : function(cb) {
+        orm.all(function(result) {
+            cb(result);
+            // console.log(result);
         });
     }
-}
+};
 
 module.exports = burger;
