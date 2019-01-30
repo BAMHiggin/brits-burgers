@@ -28,8 +28,6 @@ const orm = {
             }
             cb(result);
         });
-    
-
   
     },
     create: function (burgerName, devoured, callback) {
@@ -44,7 +42,7 @@ const orm = {
     },
     update: function (table, objColVals, condition, cb) {
         let queryString = "UPDATE burgers;"
-
+        //updating the true/false condition of a burger to devoured/not devoured
         queryString += `SET ${objtoSql(objColVals)} WHERE ${condition}`
 
         console.log(queryString);

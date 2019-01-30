@@ -1,23 +1,26 @@
-<h1> Brit's Burgers! </h1>
+{{!-- space holders while i figure it out --}}
+
+<h1> Brit's Burgers </h1>
 
 <img src="/public/assets/img/buns.png" alt="buns" class="center"></img>
 
 
 
+
 <h2>Add a burger</h2>
-
-
 
 <form class="create-form">
 
   <div class="form-group">
-    <label for="ca">Type in your burger:</label>
-    <input type="text" id="burgerType" name="BurgerTypeInput">
+    <label for="ca">Cat Name:</label>
+    <input type="text" id="ca" name="name">
   </div>
 
-  {{!-- <div class="form-group">
-   
-  </div> --}}
+  <div class="form-group">
+    <label for="sleepy">Sleepy?</label><br>
+    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
+    <input type="radio" name="sleepy" value="0"> Awake
+  </div>
 
-  <button type="burgerSubmit">Add Burger</button>
+  <button type="submit">Add Cat</button>
 </form>
