@@ -30,8 +30,8 @@ const orm = {
         });
   
     },
-    create: function (burgerName, devoured, callback) {
-        let queryString = `INSERT INTO burgers (burger_name, devoured) VALUES ('${burgerName.toString()}', ${devoured.toBool()}); `
+    create: function (burger_name, devoured, callback) {
+        let queryString = `INSERT INTO burgers (burger_name, devoured) VALUES ('${burger_name.toString()}', ${devoured.toString()}); `
 
         connection.query(queryString, function (err, result) {
             if (err) {
@@ -40,7 +40,7 @@ const orm = {
             callback(result);
         })
     },
-    update: function (table, objColVals, condition, cb) {
+    update: function (objColVals, condition, cb) {
         let queryString = "UPDATE burgers;"
         //updating the true/false condition of a burger to devoured/not devoured
         queryString += `SET ${objtoSql(objColVals)} WHERE ${condition}`
