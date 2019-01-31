@@ -9,14 +9,15 @@ let burger = {
     },
     //calling back to orm query string to create burger column and boolean value
     create: function (cols, vals, cb) {
-        orm.create("burgers", cols, vals, function (res) {
-            cb(res);
+        orm.create(cols, vals, function (result) {
+            cb(result);
         });
     },
     //calling back to orm query string to 
     update: function (objColVals, condition, cb) {
-        orm.update("burgers", objColVals, condition, function (res) {
-
+        orm.update(objColVals, condition, function (result) {
+            cb(result);
+            console.log(result);
         });
 
     }
