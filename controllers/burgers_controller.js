@@ -2,8 +2,11 @@ const express = require("express");
 
 const router = express.Router();
 
+
+//Imports the model to grab burger.js functions
 const burger = require("../models/burger.js");
 
+//Routes and requirments
 router.get("/", function (req, res) {
     burger.all(function (data) {
         let handlebarsObject = {
@@ -23,7 +26,7 @@ router.post("/api/burgers/", function (req, res) {
 router.put("/api/burgers/:id", function (req, res) {
     let condition = "id = " + req.params.id;
 
-    // console.log("condition", condition);
+
 
     burger.update({
         devoured: true
@@ -37,5 +40,4 @@ router.put("/api/burgers/:id", function (req, res) {
     });
 });
 
-// 
 module.exports = router;

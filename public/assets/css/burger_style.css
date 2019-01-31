@@ -55,7 +55,8 @@ li {
 
 footer {
   background-color:#e4cd9e;
-  position:absolute;
+  position:fixed;
+  left: 0;
    bottom:0;
    width:100%;
    height:60px;

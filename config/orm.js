@@ -30,6 +30,7 @@ const orm = {
         });
   
     },
+    // Connects with connection.js and provides format for SQL queries
     create: function (burgerName, devoured, callback) {
         let queryString = `INSERT INTO burgers (burger_name, devoured) VALUES ('${burgerName.toString()}', ${devoured}); `
 

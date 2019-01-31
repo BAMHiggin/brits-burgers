@@ -1,19 +1,17 @@
 $(function () {
+    //button to change boolean devour 
     $(".devourButton").on("click", function (event) {
         var id = $(this).data("id");
-        // var newDevour = $(this).data("newdevour");
+        //reload when burger moves to devoured area
+        location.reload();
 
-        // var newDevourChoice = {
-        //     devour: newDevour
-
-
-        // Send the PUT request.
+        // PUT request w/handlebars
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
-            // data: newDevourChoice
+
         }).then(
             function () {
-                console.log("changed devour choice", newDevour);
+                // console.log("changed devour choice", newDevour);
                 // Reload the page to get the updated list
                 location.reload();
             }
