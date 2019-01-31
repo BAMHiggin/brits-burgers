@@ -3,39 +3,36 @@
 <img src="/assets/img/buns.png" alt="buns" class="imgCenter"></img>
 
 
-  <ul id="leftUndevoured">
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{> burgers/burgersButton}}
-    {{/unless}}
-    {{/each}}
-  </ul>
+<ul id="leftUndevoured">
+  {{#each burgers}}
+  {{#unless devoured}}
+  {{> burgers/burgersButton}}
+  {{/unless}}
+  {{/each}}
+</ul>
 
 
 
-  <ul id="rightDevoured">
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgers/burgersDevoured}}
-    {{/if}}
-    {{/each}}
-  </ul>
+<ul id="rightDevoured">
+  {{#each burgers}}
+  {{#if devoured}}
+  {{> burgers/burgersDevoured}}
+  {{/if}}
+  {{/each}}
+</ul>
 
-
+<br>
 <h2>Add a burger</h2>
 
 <form class="createForm">
 
   <div class="form-group">
     <label for="bn">Burger Name:</label>
+    <br>
+    <br>
     <input type="text" id="bn" name="burger_name">
   </div>
 
-  {{!-- <div class="form-group">
-    <label for="sleepy">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div> --}}
-<br>
+  <br>
   <button type="submit"> Add Burger </button>
 </form>
